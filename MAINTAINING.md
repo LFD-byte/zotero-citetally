@@ -28,8 +28,8 @@ from Firefox 153.3 ESR, plain `loadSubScript` refuses `jar:` URIs (Mozilla bug
 Column sorting is numeric only while Zotero's `naturalSorting` pref is on
 (the default); that comparison lives in Zotero, not here.
 
-**Never change the add-on ID** (`citation-counts@<owner>.github.io`, derived in
-`scripts/build.mjs`). Changing it breaks auto-update for every installed copy.
+**Never change the add-on ID** (`citetally@lfd-byte.github.io`, `config.addonID` in
+`package.json`). Changing it breaks auto-update for every installed copy.
 
 ## When a new Zotero major version ships
 

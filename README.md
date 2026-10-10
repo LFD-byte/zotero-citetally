@@ -1,4 +1,4 @@
-# Citation Counts for Zotero
+# CiteTally — Zotero 引用数插件
 
 为 Zotero 8 / 9 / 10 获取文献引用数，数据来自 **OpenAlex** 和 **Semantic Scholar**，以可排序的列显示，同时写入条目的“其他”(Extra) 字段以便同步和导出。
 
@@ -12,7 +12,7 @@
 
 ## 设置
 
-Zotero → 设置 → **Citation Counts**：
+Zotero → 设置 → **CiteTally**：
 
 | 选项 | 说明 |
 | --- | --- |

@@ -1,5 +1,5 @@
 /*
- * Citation Counts — core logic.
+ * CiteTally — core logic.
  *
  * This file has NO dependency on Zotero. It is loaded into the plugin with
  * Services.scriptloader.loadSubScript() and into Node for unit tests with

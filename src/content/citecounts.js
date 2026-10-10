@@ -32,7 +32,7 @@ CiteCounts = {
   },
 
   log(msg) {
-    Zotero.debug("[Citation Counts] " + msg);
+    Zotero.debug("[CiteTally] " + msg);
   },
 
   async startup() {
@@ -47,7 +47,7 @@ CiteCounts = {
     this.prefPaneID = await Zotero.PreferencePanes.register({
       pluginID: this.id,
       src: this.rootURI + "content/preferences.xhtml",
-      label: "Citation Counts",
+      label: "CiteTally",
       image: this.rootURI + "content/icons/icon.svg",
     });
     this.notifierID = Zotero.Notifier.registerObserver(this, ["item"], "citecounts");
@@ -128,7 +128,7 @@ CiteCounts = {
     const S = {
       colOA: ["Cites (OpenAlex)", "引用 (OpenAlex)"],
       colS2: ["Cites (S2)", "引用 (S2)"],
-      headline: ["Citation Counts", "引用数"],
+      headline: ["CiteTally", "CiteTally"],
       fetching: ["Fetching citation counts for {n} items…", "正在获取 {n} 个条目的引用数…"],
       progress: ["{done}/{total}", "{done}/{total}"],
       saving: ["Saving…", "正在保存…"],
@@ -137,10 +137,10 @@ CiteCounts = {
       upToDate: ["All selected items are up to date", "所选条目的引用数都已是最新"],
       cancelled: ["Cancelled", "已取消"],
       busy: ["An update is already running", "已有更新任务在运行"],
-      noSource: ["Enable at least one source in Settings → Citation Counts", "请在 设置 → 引用数 中至少启用一个数据源"],
+      noSource: ["Enable at least one source in Settings → CiteTally", "请在 设置 → CiteTally 中至少启用一个数据源"],
       noKey: [
-        "No OpenAlex API key set — only a small daily budget is available. Add a free key in Settings → Citation Counts.",
-        "未设置 OpenAlex API key，每日额度很小。可在 设置 → 引用数 中填入免费 key。",
+        "No OpenAlex API key set — only a small daily budget is available. Add a free key in Settings → CiteTally.",
+        "未设置 OpenAlex API key，每日额度很小。可在 设置 → CiteTally 中填入免费 key。",
       ],
       cleared: ["Removed citation counts from {n} items", "已移除 {n} 个条目的引用数"],
       error: ["Error: {msg}", "错误：{msg}"],

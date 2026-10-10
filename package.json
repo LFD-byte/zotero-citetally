@@ -1,12 +1,13 @@
 {
-  "name": "zotero-citation-counts",
+  "name": "zotero-citetally",
   "version": "1.0.0",
   "description": "Zotero 8–10 plugin: citation counts from OpenAlex and Semantic Scholar as sortable columns.",
   "private": true,
   "license": "MIT",
   "author": "Huifa Li",
   "config": {
-    "repo": "OWNER/zotero-citation-counts",
+    "repo": "LFD-byte/zotero-citetally",
+    "addonID": "citetally@lfd-byte.github.io",
     "zoteroMinVersion": "7.999",
     "zoteroMaxVersion": "10.0.*"
   },
