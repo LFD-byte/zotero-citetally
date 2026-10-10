@@ -1,0 +1,23 @@
+{
+  "name": "zotero-citation-counts",
+  "version": "1.0.0",
+  "description": "Zotero 8–10 plugin: citation counts from OpenAlex and Semantic Scholar as sortable columns.",
+  "private": true,
+  "license": "MIT",
+  "author": "Huifa Li",
+  "config": {
+    "repo": "OWNER/zotero-citation-counts",
+    "zoteroMinVersion": "7.999",
+    "zoteroMaxVersion": "10.0.*"
+  },
+  "scripts": {
+    "test": "node --test test/*.test.js",
+    "lint": "eslint src test scripts",
+    "build": "node scripts/build.mjs",
+    "check": "npm test && npm run lint && npm run build"
+  },
+  "devDependencies": {
+    "eslint": "^9.0.0",
+    "globals": "^15.0.0"
+  }
+}

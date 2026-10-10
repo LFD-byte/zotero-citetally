@@ -1,0 +1,20 @@
+{
+  "manifest_version": 2,
+  "name": "Citation Counts",
+  "version": "__VERSION__",
+  "description": "Citation counts from OpenAlex and Semantic Scholar as sortable columns.",
+  "author": "__AUTHOR__",
+  "homepage_url": "__HOMEPAGE__",
+  "icons": {
+    "48": "content/icons/icon.svg",
+    "96": "content/icons/icon.svg"
+  },
+  "applications": {
+    "zotero": {
+      "id": "__ADDON_ID__",
+      "update_url": "__UPDATE_URL__",
+      "strict_min_version": "__MIN_VERSION__",
+      "strict_max_version": "__MAX_VERSION__"
+    }
+  }
+}

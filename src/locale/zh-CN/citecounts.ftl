@@ -1,0 +1,33 @@
+citecounts-menu-update =
+    .label = 更新引用数
+citecounts-menu-update-stale =
+    .label = 更新过期的引用数
+citecounts-menu-clear =
+    .label = 移除引用数
+citecounts-menu-stop =
+    .label = 停止更新引用数
+citecounts-menu-collection =
+    .label = 更新引用数
+citecounts-menu-collection-stale =
+    .label = 更新过期的引用数
+
+citecounts-undo-update = 更新引用数
+citecounts-undo-clear = 移除引用数
+
+citecounts-pref-sources = 数据源
+citecounts-pref-openalex-enable =
+    .label = OpenAlex
+citecounts-pref-openalex-key = API key：
+citecounts-pref-openalex-key-help = 在 openalex.org 注册后于 Settings → API 免费获取。不填 key 时每日额度很小。
+citecounts-pref-s2-enable =
+    .label = Semantic Scholar
+citecounts-pref-s2-key = API key（可选）：
+citecounts-pref-s2-key-help = 不填 key 时会主动放慢请求速度，以免超出公共限速。
+citecounts-pref-email = 联系邮箱（可选，发送给 OpenAlex）：
+citecounts-pref-behavior = 行为
+citecounts-pref-title-fallback =
+    .label = 对没有 DOI 或 arXiv ID 的条目按标题精确匹配
+citecounts-pref-auto =
+    .label = 新添加条目时自动获取引用数
+citecounts-pref-stale = “更新过期的引用数”会刷新超过以下天数的数据：
+citecounts-pref-storage = 引用数保存在“其他”(Extra) 字段中（如 “Citations (OpenAlex): 123 [2026-10-10]”），可随文库同步和导出。右键条目列表的表头即可显示可排序的引用数列。

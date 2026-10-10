@@ -1,0 +1,38 @@
+<linkset>
+  <html:link rel="localization" href="citecounts.ftl"/>
+</linkset>
+<vbox id="citecounts-prefs">
+  <groupbox>
+    <label><html:h2 data-l10n-id="citecounts-pref-sources"/></label>
+
+    <checkbox preference="extensions.citecounts.openalex.enabled" data-l10n-id="citecounts-pref-openalex-enable"/>
+    <hbox align="center" class="citecounts-indent">
+      <label data-l10n-id="citecounts-pref-openalex-key" control="citecounts-oa-key"/>
+      <html:input id="citecounts-oa-key" type="password" size="36" preference="extensions.citecounts.openalex.apiKey"/>
+    </hbox>
+    <description class="citecounts-indent" data-l10n-id="citecounts-pref-openalex-key-help"/>
+
+    <checkbox preference="extensions.citecounts.s2.enabled" data-l10n-id="citecounts-pref-s2-enable"/>
+    <hbox align="center" class="citecounts-indent">
+      <label data-l10n-id="citecounts-pref-s2-key" control="citecounts-s2-key"/>
+      <html:input id="citecounts-s2-key" type="password" size="36" preference="extensions.citecounts.s2.apiKey"/>
+    </hbox>
+    <description class="citecounts-indent" data-l10n-id="citecounts-pref-s2-key-help"/>
+
+    <hbox align="center">
+      <label data-l10n-id="citecounts-pref-email" control="citecounts-email"/>
+      <html:input id="citecounts-email" type="email" size="30" preference="extensions.citecounts.email"/>
+    </hbox>
+  </groupbox>
+
+  <groupbox>
+    <label><html:h2 data-l10n-id="citecounts-pref-behavior"/></label>
+    <checkbox preference="extensions.citecounts.titleFallback" data-l10n-id="citecounts-pref-title-fallback"/>
+    <checkbox preference="extensions.citecounts.autoOnAdd" data-l10n-id="citecounts-pref-auto"/>
+    <hbox align="center">
+      <label data-l10n-id="citecounts-pref-stale" control="citecounts-stale"/>
+      <html:input id="citecounts-stale" type="number" min="0" style="width: 6em" preference="extensions.citecounts.staleDays"/>
+    </hbox>
+    <description data-l10n-id="citecounts-pref-storage"/>
+  </groupbox>
+</vbox>
