@@ -17,7 +17,7 @@ export default [
       globals: { ...zoteroGlobals, ...globals.browser, module: "readonly", pref: "readonly" },
     },
     rules: {
-      "no-unused-vars": ["error", { args: "none", varsIgnorePattern: "^(install|startup|shutdown|uninstall|onMainWindowLoad|onMainWindowUnload|CiteCounts|CiteCountsLib)$" }],
+      "no-unused-vars": ["error", { args: "none", caughtErrors: "none", varsIgnorePattern: "^(install|startup|shutdown|uninstall|onMainWindowLoad|onMainWindowUnload|CiteCounts|CiteCountsLib)$" }],
       "no-undef": "error",
       "no-redeclare": "off",
     },
