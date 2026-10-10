@@ -2,7 +2,7 @@
 // Usage: node scripts/build.mjs
 import { createHash } from "node:crypto";
 import { execFileSync } from "node:child_process";
-import { cpSync, existsSync, mkdirSync, readFileSync, readdirSync, rmSync, statSync, writeFileSync } from "node:fs";
+import { copyFileSync, existsSync, mkdirSync, readFileSync, readdirSync, rmSync, statSync, writeFileSync } from "node:fs";
 import { dirname, join, relative } from "node:path";
 import { fileURLToPath } from "node:url";
 
@@ -22,7 +22,17 @@ const out = join(root, "build");
 const stage = join(out, "addon");
 rmSync(out, { recursive: true, force: true });
 mkdirSync(stage, { recursive: true });
-cpSync(join(root, "src"), stage, { recursive: true });
+// Plain file-by-file copy: fs.cpSync fails on some mounted/synced folders.
+function copyDir(from, to) {
+  mkdirSync(to, { recursive: true });
+  for (const name of readdirSync(from)) {
+    const src = join(from, name);
+    const dst = join(to, name);
+    if (statSync(src).isDirectory()) copyDir(src, dst);
+    else copyFileSync(src, dst);
+  }
+}
+copyDir(join(root, "src"), stage);
 
 const manifestPath = join(stage, "manifest.json");
 const manifest = readFileSync(manifestPath, "utf8")
