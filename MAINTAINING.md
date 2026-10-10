@@ -66,12 +66,13 @@ Known constraints (as of 2026-10):
 ```bash
 # bump "version" in package.json and add a "## x.y.z" section to CHANGELOG.md
 npm test && npm run build
-git commit -am "Release x.y.z"
-git tag vx.y.z && git push && git push --tags
+git commit -am "Release x.y.z" && git push
 ```
 
-The `Release` workflow checks the tag matches `package.json`, runs tests and
-lint, builds, and publishes a GitHub release with the `.xpi` and
-`update.json`. Installed copies poll
-`https://github.com/<repo>/releases/latest/download/update.json` and update
-themselves.
+The `Release` workflow runs on every push to main. If `v<version>` has no
+GitHub release yet, it runs tests and lint, builds, and creates the tag and
+release (with the `.xpi` and `update.json`) itself — no manual tagging.
+Pushing a `v*` tag or using "Run workflow" in the Actions tab also works.
+Installed copies poll
+`https://github.com/LFD-byte/zotero-citetally/releases/latest/download/update.json`
+and update themselves.
